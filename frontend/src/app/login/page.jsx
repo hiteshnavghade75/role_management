@@ -46,6 +46,7 @@ export default function LoginPage() {
       });
 
       const data = await res.json();
+      console.log("Use this otp to login:", data?.otp);
 
       if (!res.ok) {
         throw new Error(data.message || "Failed to send OTP");
